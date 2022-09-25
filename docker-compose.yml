@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+    app:
+      build: ./build
+      restart: unless-stopped
+      ports:
+        - "127.0.0.1:5000:5000"
+      volumes:
+        - database:/src/database
+
+volumes:
+  database:
