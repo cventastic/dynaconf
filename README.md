@@ -18,3 +18,5 @@ Delete:
 get all entries: 
 
 ```curl http://127.0.0.1:5000/storage```
+
+```curl http://127.0.0.1:5000/storage | jq -r '[.[].ip]|join(",")'```
